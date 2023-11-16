@@ -3,7 +3,6 @@
     --color-neutral-10: #171717;
     --color-neutral-30: #a8a29e;
     --color-neutral-40: #f5f5f5;
-
 }
 * {
     margin: 0;
@@ -13,8 +12,24 @@
 }
 body {
     width: 100%;
-    height: 100%;   
+    height: 100%;
+    background-image: linear-gradient(#003E24,#1CA872,#2CCA8D,#42EA9A,#8ADC9C,#ABE8B9,#BBD1C0);   
 }
+
+/* CONFIGURANDO LAYOUT */
+.container {
+    max-width: 1106px;
+    margin: auto;
+}
+.main {
+    width: 1106px;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HEADER */
 #wrapper-nav {
     width: 100%;
     margin: auto;
@@ -23,13 +38,6 @@ body {
     font-family: 'Roboto' , sans-serif;
     font-size: 12px;
     font-weight: 700;
-}
-.main {
-    width: 1106px;
-    margin: auto;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
 #space-area {
     display: flex;
@@ -40,63 +48,7 @@ body {
     align-items: center;
     gap: 10px;
 }
-.head-btn a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    padding: 7px 11px;
-    transition: color .3s;
-    /* background-color: #003E24; */
-    /* color: #003E24; */
-}
-.head-btn a:hover {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-.search-box {
-    background-color: transparent;
-    border-radius: 10px ;
-}
-.row {
-    background-color: #b6f2d0;
-    display: flex;
-    align-items: center;
-    padding: 8px 16px;
-    border-radius: 15px;
-}
-.search-box input {
-    width: 135px;
-    flex: 1;
-    height: 20px;
-    background: transparent;
-    border: 0;
-    outline: 0;
-    font-size: 15px;
-    color: #555;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    transition: width 250ms ease-in;
-}
-.search-box input:focus {
-    width: 235px;
-}
-.search-box input::placeholder {
-    color: #84B09B;
-    font-family: 'Roboto', 'FontAwesome';
-}
-.search-box button {
-    background-color: transparent;
-    border: 0;
-    outline: 0;
-}
-.search-box button .fa-solid {
-    width: 22px;
-    color: #555;
-    font-size: 20px;
-    cursor: pointer;
-}
+
 #wrapper-nav header {
     background-color: #5fdd96;
     width: 100%;
@@ -144,11 +96,13 @@ header a {
     text-align: center;
 }
 header h1 {
+    font-family: 'Nunito', sans-serif;
     line-height: normal;
-    font-weight: 900;
+    font-weight: 1000;
     font-size: 32px;
     display: flex;
     align-items: center;
+    text-transform: uppercase;
 }
 #wrapper-nav nav ul li ul.dropdown li {
     display: block;
@@ -171,51 +125,197 @@ header h1 {
     vertical-align: text-bottom;
     margin-right: 2px;
 }
+
+/* LOGO */
+header .logo {
+    width: 60px;
+    height: auto;
+    margin-right: 5px;
+}
+
+/* BOTOES LOGIN */
+.head-btn a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 7px 11px;
+    transition: color .3s;
+}
+.head-btn a:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* BARRA DE PESQUISA */
+.search-box {
+    background-color: transparent;
+    border-radius: 10px ;
+}
+.row {
+    background-color: #b6f2d0;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 15px;
+}
+.search-box input {
+    width: 135px;
+    flex: 1;
+    height: 20px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 15px;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    transition: width 250ms ease-in;
+}
+.search-box input:focus {
+    width: 235px;
+}
+.search-box input::placeholder {
+    color: #84B09B;
+    font-family: 'Roboto', 'FontAwesome';
+}
+.search-box button {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+}
+.search-box button .fa-solid {
+    width: 22px;
+    color: #555;
+    font-size: 20px;
+    cursor: pointer;
+}
+/* CAIXA TESTE */
 .box {
     width: 100%;
-    height: 7000px;
-    background-image: linear-gradient(#003E24,#1CA872,#2CCA8D,#42EA9A,#8ADC9C,#ABE8B9,#BBD1C0);
+    height: 100vh;
+}
+
+/* SESSÃO BANNER HOME */
+.bg-home {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 110vh;
+}
+.bg-home::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image:linear-gradient(to bottom, rgba(92,210,143,0.1), #003E24), url("../imgs/banner-1.png") ;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* opacity: 0.9; */
+    background-position: 50% 0;
+}
+.banner-layout {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.logo-banner {
+    width: 240px;
+    height: fit-content;
+}
+.logo-banner img {
+    width: 100%;
+    height: 100%;   
+    transform: translateY(0px);
+    animation: float 5s ease-in-out infinite;
+}
+@keyframes float{
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-30px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+.title-banner {
+    text-align: center;
+    font-family: 'Nunito';
+    color: #fff;
+    text-transform: uppercase;
+}
+.title-banner h1 {
+    font-size: 32px;
+    text-shadow: 3px 0px 3px black;
+}
+.title-banner h2 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* SESSAO COMO ESTUDAR */
+.como-estudar {
+    background-color: #003E24;
+}
+
+/* SESSAO CARROSSEL ANIMAIS */
+.main .title-1 h1 {
+    color: #fff;
+    text-shadow: 3px 0px 0px black;
+    font-size: 34px;
+    text-transform: uppercase;
 }
 .center-slide {
-    width: 990px;
+    display: flex;
+    /* width: 990px; */
     height: 100%;
     margin: auto;
+    position: relative;
 }
 .center-slide .img-slide img {
-    max-width: 300px;
+    max-width: 350px;
+    /* width: calc(100% /3); */
     object-fit: cover;
 }
 .main .prev {
+    position: absolute;
+    left: 5%;
+    top: 50%;
     padding: 50px 24px;
     background: rgba(92,210,143,0.32);
-    border-radius: 46px;
+    border-radius: 50%;
     font-size: 90px;
-    position: absolute;
-    left: 60px;
-    top: 65%;
+    float: left;
     color: #244834;
     cursor: pointer;
     text-align: center;
     transition: all 0.5s ease;
-    /* width: 50px; */
-    /* height: 50px; */
-    /* line-height: 50px; */
+
 } 
 .main .next {
+    position: absolute;
+    right: 5%;
+    top: 50%;
     padding: 50px 24px;
     background: rgba(92,210,143,0.32);
-    border-radius: 46px;
+    border-radius: 50%;
     font-size: 90px;
-    position: absolute;
-    right: 60px;
-    top: 65%;
+    /* float: right; */
     color: #244834;
     cursor: pointer;
     text-align: center;
     transition: all 0.5s ease;
-    /* width: 50px; */
-    /* height: 50px; */
-    /* line-height: 50px; */
 }
 .main .next:hover {
     background: rgba(92,210,143,0.65);
@@ -224,6 +324,7 @@ header h1 {
     background: rgba(92,210,143,0.65);
 }
 .animais {
+    position: relative;
     background-image: url("../imgs/bg_foresta.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -247,7 +348,7 @@ header h1 {
     display: flex;
     align-items: flex-end;
 }
-.main .slide-title{
+ .slide-title{
     display: inline-block;
     height: 50px;
     line-height: 50px;
@@ -255,13 +356,31 @@ header h1 {
     vertical-align: middle;
     font-family: 'Roboto';
     font-weight: 700;
-    color: black;
+    color: #5fdd96;
     font-size: 35px;
     text-transform: uppercase;
+    text-shadow: 6px 6px 7px black;
+    z-index: 2;
+}
+/* TRONCO TITULO */
+.animal-title {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 300px;
+    height: fit-content;
+    right: 0;
+    bottom: 10%;
+}
+.tronco-nome {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
 }
 
 /* FOOTER */
-
 footer {
     width: 100%;
     color: var(--color-neutral-40);
@@ -344,36 +463,6 @@ footer {
 #footer_subscribe p {
     color: var(--color-neutral-30);
 }
-
-#input_group {
-    display: flex;
-    align-items: center;
-    background-color: var(--color-neutral-0);
-    border-radius: 4px;
-}
-
-#input_group input {
-    all: unset;
-    padding: 0.75rem;
-    width: 100%;
-}
-
-#input_group button {
-    background-color: #7f37c9;
-    border: none;
-    color: var(--color-neutral-40);
-    padding: 0px 1.25rem;
-    font-size: 1.125rem;
-    height: 100%;
-    border-radius: 0px 4px 4px 0px;
-    cursor: pointer;
-    transition: all 0.4s;
-}
-
-#input_group button:hover {
-    opacity: 0.8;
-}
-
 #footer_copyright {
     display: flex;
     justify-content: center;
@@ -383,6 +472,7 @@ footer {
     font-weight: 100;
 }
 
+/* MEDIAS QUERYS */
 @media screen and (max-width: 768px) {
     #footer_content {
         grid-template-columns: repeat(2, 1fr);

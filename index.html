@@ -8,7 +8,7 @@
     <!-- TÍTULO DA PÁGINA -->
     <title>Estudai - Principal</title>
     <!-- ICONE DO SITE -->
-    <link rel="shortcut icon" href="imgs/icon studai 2.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="imgs/png icons/iconp.png" type="image/x-icon"/>
     <!-- LINK CSS DO CARROSSEL -->
     <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!-- JQUERRY -->
@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@900;1000&display=swap" rel="stylesheet">
     <!-- LINK FONTE ICONES-BOOTSRAP -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- LINK FONTE ICONES GOOGLE -->
@@ -38,7 +39,7 @@
                     <!-- SPACE AREA É UM CONTAINER QUE FICA O LOGO NA ESQUERDA E SEARCHBAR NA DIREITA -->
                     <div id="space-area">
                         <!-- LOGO COM TEXTO -->
-                        <a href="#"><img class="logo" src ="imgs/icon studai 2.png"><h1>estuda.ai</h1></a>
+                        <a href="#"><img class="logo" src ="imgs/png icons/iconp.png"><h1>estuda.ai</h1></a>
                         <!-- ESSA DIV CONTEM OS BOTOES E A BARRA DE PESQUISA DA DIREITA -->
                         <div class="right-area">
 
@@ -98,39 +99,80 @@
         </div>
         <!-- FIM DO CABEÇALHO -->
 
-        <section class="animais">
-            <div class="main">
-                    <div class="center-slide">
-                        <div data-name="Cacau" class="img-slide">
-                            <img src="imgs/capivara.png">
+        <!-- SESSÃO BANNER, LOGO E CARDS -->
+        <section class="banner">
+            <div class="bg-home">
+                <div class="container">
+                        <div class="banner-layout">
+                            <div class="logo-banner">
+                                <img src="imgs/png icons/iconc.png" alt="">
+                            </div>
+                            <div class="title-banner">
+                                <h1>Seja Bem vindo ao Estuda-ai, pequeno filhote!</h1>
+                                <h2>Faça parte desse novo mundo de aprendizagens e patinhas...</h2>
+                            </div>
                         </div>
-                        <div data-name="Theo" class="img-slide">
-                            <img src="imgs/tucano.png">
-                        </div>
-                        <div data-name="Sol" class="img-slide">
-                            <img src="imgs/onça.png">
-                        </div>
-                        <div data-name="Rio" class="img-slide">
-                            <img src="imgs/arara-azul.png">
-                        </div>
-                        <div data-name="Guarani" class="img-slide">
-                            <img src="imgs/lobo-guara.png">
-                        </div>
-                        <div data-name="Bento" class="img-slide">
-                            <img src="imgs/bem-te-vi.png">
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-chevron-left fa-lg prev"></i>
-                    <i class="fa-solid fa-chevron-right fa-lg next"></i>
-                    <div id="slidetitle" class="slide-title"></div>
-
+                </div>
             </div>
         </section>
 
-        <div class="box">
-            <iframe width="700" height="400" src="https://www.youtube-nocookie.com/embed/I_vi2q6sC1k?si=0A5TyRCcJmfdI5XD?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
+        <section class="como-estudar">
+            <div class="container">
+                <div class="box"></div>
+            </div>
+        </section>
 
+        <!-- SESSÃO ARBUSTO BOAS VINDAS -->
+        <section class="bushes">
+
+        </section>
+
+        <!-- SESSÃO CARROSSEL COM MODAL -->
+        <section class="animais">
+            <div class="main">
+                <div class="title-1">
+                    <h1>
+                        conheça seus amigos da floresta!
+                    </h1>
+                </div>
+                    <!-- CARROSSEL SLICK -->
+                    <div class="center-slide">
+                        <!-- IMAGEM CAPIVARA -->
+                        <div data-name="Cacau" class="img-slide">
+                            <img src="imgs/png icons/capi.png">
+                        </div>
+                        <!-- IMAGEM TUCANO -->
+                        <div data-name="Theo" class="img-slide">
+                            <img src="imgs/png icons/tuco.png">
+                        </div>
+                        <!-- IMAGEM ONÇA -->
+                        <div data-name="Sol" class="img-slide">
+                            <img src="imgs/png icons/onca.png">
+                        </div>
+                        <!-- IMAGEM ARARA -->
+                        <div data-name="Rio" class="img-slide">
+                            <img src="imgs/png icons/arara2.png">
+                        </div>
+                        <!-- IMAGEM LOBO -->
+                        <div data-name="Guarani" class="img-slide">
+                            <img src="imgs/png icons/lobo.png">
+                        </div>
+                        <!-- IMAGEM BEM-TE-VI -->
+                        <div data-name="Bento" class="img-slide">
+                            <img src="imgs/png icons/bento.png">
+                        </div>
+                    </div>
+                        <i class="fa-solid fa-chevron-left fa-lg prev"></i>
+                        <i class="fa-solid fa-chevron-right fa-lg next"></i>
+
+            </div>
+            <div class="animal-title">
+                <img class="tronco-nome" src="imgs/TRONCO - PRONTO.png" alt="">
+                <div id="slidetitle" class="slide-title"></div>
+            </div>
+        </section>
+
+        <!-- RODAPÉ DO SITE -->
         <footer>
             
                 <div id="footer_content">
@@ -192,21 +234,7 @@
                             <li>
                                 <a href="#" class="footer-link">Cloud</a>
                             </li>
-                        </ul>
-                        <!-- <div id="footer_subscribe">
-                            <h3>Subscribe</h3>
-                            <p>
-                                Enter your e-mail to get notified about
-                                our news solutions
-                            </p>
-                            <div id="input_group">
-                                <input type="email" id="email">
-                                <button>
-                                    <i class="fa-regular fa-envelope"></i>
-                                </button>
-                            </div>
-                        </div> -->
-            
+                        </ul>            
                 </div>
             
             <div id="footer_copyright">
@@ -214,6 +242,7 @@
                 2023 all rights reserved
             </div>
         </footer>
+        <!-- FIM RODAPÉ -->
 
         <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src="js/slickslide.js"></script>
